@@ -38,6 +38,7 @@ export default class UserController {
     async create(req, res, next) {
         try {
             const userData = req.body
+            console.log('User Data: ', userData)
             const user = await this.UserService.create(userData)
             res.status(201).json(user)
         } catch (error) {
