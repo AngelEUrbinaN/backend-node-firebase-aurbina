@@ -10,25 +10,25 @@ const userRoutes = [
     {
         method: 'get',
         path: '/',
-        middleware: [authMiddleware, roleMiddleware('admin')],
+        middleware: [authMiddleware, roleMiddleware('admin', 'soporte')],
         handle: 'getAll'
     },
     {
         method: 'post',
         path: '/create',
-        middleware: [authMiddleware, roleMiddleware('admin')],
+        // middleware: [authMiddleware, roleMiddleware('admin', 'soporte')],
         handle: 'create'
     },
     {
         method: 'put',
         path: '/update/:id',
-        middleware: [authMiddleware, roleMiddleware('admin')],
+        middleware: [authMiddleware, roleMiddleware('admin', 'soporte')],
         handle: 'update'
     },
     {
         method: 'delete',
         path: '/delete/:id',
-        middleware: [authMiddleware, roleMiddleware('admin')],
+        middleware: [authMiddleware, roleMiddleware('admin', 'soporte')],
         handle: 'delete'
     },
     {
@@ -46,7 +46,7 @@ const userRoutes = [
     {
         method: 'post',
         path: '/unlock/:id',
-        middleware: [authMiddleware, roleMiddleware('admin')],
+        middleware: [authMiddleware, roleMiddleware('admin', 'soporte')],
         handle: 'unlockUser'
     },
     {
